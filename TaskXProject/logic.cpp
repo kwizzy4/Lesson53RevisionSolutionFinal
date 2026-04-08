@@ -14,5 +14,11 @@
 #include "logic.h"
 
 int get_triangle_number(int index) {
-	return 0;
+	if (index == 1) {
+		return 1;
+	}
+	if (index < 1) {
+		return 0;
+	}
+	return get_triangle_number(index - 1) + index;
 }
